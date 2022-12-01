@@ -17,13 +17,13 @@ const Home = () => {
   },[])
 
   const loadBlocks = async () => {
-    await fetch('https://blockchain-criptografia.azurewebsites.net/get_chain')
+    await fetch('http://localhost:8080/get_chain')
       .then(response => response.json())
       .then(data => {setChains(data)});
   }
 
   const handleSubmit = (e) => {
-    fetch('https://blockchain-criptografia.azurewebsites.net/add_block', {
+    fetch('http://localhost:8080/add_block', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ const Home = () => {
   }
 
   const handleClear = () => {
-    fetch('https://blockchain-criptografia.azurewebsites.net/clean_chain', {
+    fetch('http://localhost:8080/clean_chain', {
      method: "POST", 
     }).then(() => loadBlocks());
   }

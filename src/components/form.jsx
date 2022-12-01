@@ -11,13 +11,13 @@ const FormTransacao = ({handleSubmit, handleChange, inputs}) => {
             <Form.Group>
               <Row>
                 <Form.Control 
-                  type="text" placeholder="CPF" name="cpf" value={inputs.cpf || ""} onChange={handleChange} />              
+                  type="text" placeholder="CPF" name="cpf" value={inputs.cpf || ""} onChange={handleChange} required/>              
               </Row>
             </Form.Group>
             <Form.Group>
               <Row>
                 <Form.Control 
-                  type="text" placeholder="Valor" name="valor" value={inputs.valor || ""} onChange={handleChange} />              
+                  type="text" placeholder="Valor" name="valor" value={inputs.valor || ""} onChange={handleChange} required/>              
               </Row>
             </Form.Group>
             <Form.Group onChange={handleChange} style={{margin: 10}}>
