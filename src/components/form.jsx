@@ -17,7 +17,7 @@ const FormTransacao = ({handleSubmit, handleChange, inputs}) => {
             <Form.Group>
               <Row>
                 <Form.Control 
-                  type="text" placeholder="Valor" name="valor" value={inputs.valor || ""} onChange={handleChange} required/>              
+                  type="number" placeholder="Valor" step="any" name="valor" value={inputs.valor || ""} onChange={handleChange} required/>              
               </Row>
             </Form.Group>
             <Form.Group onChange={handleChange} style={{margin: 10}}>
