@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/github-page/static/css/main.6c1e2607.css",
-    "main.js": "/github-page/static/js/main.088fe297.js",
-    "static/js/787.039dcbfe.chunk.js": "/github-page/static/js/787.039dcbfe.chunk.js",
-    "index.html": "/github-page/index.html",
-    "main.6c1e2607.css.map": "/github-page/static/css/main.6c1e2607.css.map",
-    "main.088fe297.js.map": "/github-page/static/js/main.088fe297.js.map",
-    "787.039dcbfe.chunk.js.map": "/github-page/static/js/787.039dcbfe.chunk.js.map"
+    "main.css": "/blockchain-reactjs/static/css/main.6c1e2607.css",
+    "main.js": "/blockchain-reactjs/static/js/main.9eab9179.js",
+    "static/js/787.039dcbfe.chunk.js": "/blockchain-reactjs/static/js/787.039dcbfe.chunk.js",
+    "index.html": "/blockchain-reactjs/index.html",
+    "main.6c1e2607.css.map": "/blockchain-reactjs/static/css/main.6c1e2607.css.map",
+    "main.9eab9179.js.map": "/blockchain-reactjs/static/js/main.9eab9179.js.map",
+    "787.039dcbfe.chunk.js.map": "/blockchain-reactjs/static/js/787.039dcbfe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6c1e2607.css",
-    "static/js/main.088fe297.js"
+    "static/js/main.9eab9179.js"
   ]
 }
