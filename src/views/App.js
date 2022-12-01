@@ -44,13 +44,19 @@ const Home = () => {
     setInputs(values => ({...values, [name]: value}))
   }
 
+  const handleClear = () => {
+    fetch('https://blockchain-criptografia.azurewebsites.net/clean_chain', {
+     method: "POST", 
+    }).then(() => loadBlocks());
+  }
+
   return (
     <>
       <FormTransacao
         handleChange={handleChange}
         handleSubmit={handleSubmit} 
         inputs={inputs}/>
-      <Row style={{marginTop: "50px"}} hidden={!chains.length}>
+      <Row style={{marginTop: 50}} hidden={!chains.length}>
         <Col md={{span: 6, offset: 3}}>
           <Row>
             <Button 
@@ -65,9 +71,17 @@ const Home = () => {
       {chains.map((chain) => (
         <Chain key={chain.cpf} chain={chain} isHidden={isHidden}/>
       ))}
-
+      <Button variant={"danger"} style={buttonClear} onClick={handleClear}>
+        Limpar Blockchain
+      </Button>  
     </>
   );
+}
+
+const buttonClear = {
+  position: "fixed",
+  right: 10,
+  bottom: 10,
 }
 
 export default Home;

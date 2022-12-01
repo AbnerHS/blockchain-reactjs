@@ -9,12 +9,16 @@ const FormTransacao = ({handleSubmit, handleChange, inputs}) => {
           <h3 className='text-center'>Enviar Transação</h3>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
-              <Form.Control 
-                type="text" placeholder="CPF" name="cpf" value={inputs.cpf || ""} onChange={handleChange} />              
+              <Row>
+                <Form.Control 
+                  type="text" placeholder="CPF" name="cpf" value={inputs.cpf || ""} onChange={handleChange} />              
+              </Row>
             </Form.Group>
             <Form.Group>
-              <Form.Control 
-                type="text" placeholder="Valor" name="valor" value={inputs.valor || ""} onChange={handleChange} />              
+              <Row>
+                <Form.Control 
+                  type="text" placeholder="Valor" name="valor" value={inputs.valor || ""} onChange={handleChange} />              
+              </Row>
             </Form.Group>
             <Form.Group onChange={handleChange} style={{margin: 10}}>
               <center>
@@ -36,7 +40,9 @@ const FormTransacao = ({handleSubmit, handleChange, inputs}) => {
                 
               </center>
             </Form.Group>
-            <Button variant='secondary' style={{width: "100%"}} type="submit">Enviar</Button>
+            <Row>
+              <Button variant='secondary' style={{width: "100%"}} type="submit">Enviar</Button>
+            </Row>
           </Form>
         </Col>
     </Row>
