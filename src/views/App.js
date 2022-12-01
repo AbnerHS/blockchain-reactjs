@@ -51,7 +51,7 @@ const Home = () => {
   }
 
   return (
-    <>
+    <div style={{padding: 20, paddingRight: 22}}>
       <FormTransacao
         handleChange={handleChange}
         handleSubmit={handleSubmit} 
@@ -74,7 +74,7 @@ const Home = () => {
       <Button variant={"danger"} style={buttonClear} onClick={handleClear}>
         Limpar Blockchain
       </Button>  
-    </>
+    </div>
   );
 }
 
