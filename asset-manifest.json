@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/blockchain-reactjs/static/css/main.6c1e2607.css",
-    "main.js": "/blockchain-reactjs/static/js/main.9eab9179.js",
+    "main.css": "/blockchain-reactjs/static/css/main.44f8b8b5.css",
+    "main.js": "/blockchain-reactjs/static/js/main.55b2cbb1.js",
     "static/js/787.039dcbfe.chunk.js": "/blockchain-reactjs/static/js/787.039dcbfe.chunk.js",
     "index.html": "/blockchain-reactjs/index.html",
-    "main.6c1e2607.css.map": "/blockchain-reactjs/static/css/main.6c1e2607.css.map",
-    "main.9eab9179.js.map": "/blockchain-reactjs/static/js/main.9eab9179.js.map",
+    "main.44f8b8b5.css.map": "/blockchain-reactjs/static/css/main.44f8b8b5.css.map",
+    "main.55b2cbb1.js.map": "/blockchain-reactjs/static/js/main.55b2cbb1.js.map",
     "787.039dcbfe.chunk.js.map": "/blockchain-reactjs/static/js/787.039dcbfe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c1e2607.css",
-    "static/js/main.9eab9179.js"
+    "static/css/main.44f8b8b5.css",
+    "static/js/main.55b2cbb1.js"
   ]
 }
