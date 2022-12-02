@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-const FormTransacao = ({handleSubmit, handleChange, inputs}) => {
+const FormTransacao = ({handleSubmit, handleChange, inputs, isLoading}) => {
     return <Row>
         <Col md={{ span: 6, offset: 3}}>
           <h3 className='text-center'>Enviar Transação</h3>
@@ -41,7 +41,7 @@ const FormTransacao = ({handleSubmit, handleChange, inputs}) => {
               </center>
             </Form.Group>
             <Row>
-              <Button variant='secondary' style={{width: "100%"}} type="submit">Enviar</Button>
+              <Button variant='secondary' disabled={isLoading} type="submit">{isLoading ? 'Carregando...': 'Enviar'}</Button>
             </Row>
           </Form>
         </Col>

@@ -11,19 +11,21 @@ const Home = () => {
   const [chains, setChains] = useState([]);
   const [inputs, setInputs] = useState({"funcao": "deposito"});
   const [isHidden, setIsHidden] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     loadBlocks()
   },[])
 
   const loadBlocks = async () => {
-    await fetch('https://blockchain-criptografia.azurewebsites.net/get_chain')
+    await fetch('http://localhost:8080/get_chain')
       .then(response => response.json())
-      .then(data => {setChains(data)});
+      .then(data => {setChains(data); setIsLoading(false)});
   }
 
   const handleSubmit = (e) => {
-    fetch('https://blockchain-criptografia.azurewebsites.net/add_block', {
+    setIsLoading(true)
+    fetch('http://localhost:8080/add_block', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -45,7 +47,7 @@ const Home = () => {
   }
 
   const handleClear = () => {
-    fetch('https://blockchain-criptografia.azurewebsites.net/clean_chain', {
+    fetch('http://localhost:8080/clean_chain', {
      method: "POST", 
     }).then(() => loadBlocks());
   }
@@ -55,6 +57,7 @@ const Home = () => {
       <FormTransacao
         handleChange={handleChange}
         handleSubmit={handleSubmit} 
+        isLoading={isLoading}
         inputs={inputs}/>
       <Row style={{marginTop: 50}} hidden={!chains.length}>
         <Col md={{span: 6, offset: 3}}>
