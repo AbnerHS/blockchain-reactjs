@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import { urlLocal, urlServer } from '../components/url';
+import { urlServer } from '../components/url';
 import Chain from '../components/chain';
 import FormTransacao from '../components/form';
 
