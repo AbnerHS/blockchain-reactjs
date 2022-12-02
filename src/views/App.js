@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-
+import { urlLocal, urlServer } from '../components/url';
 import Chain from '../components/chain';
 import FormTransacao from '../components/form';
 
@@ -18,14 +18,14 @@ const Home = () => {
   },[])
 
   const loadBlocks = async () => {
-    await fetch('https://blockchain-criptografia.azurewebsites.net/get_chain')
+    await fetch(`${urlServer}/get_chain`)
       .then(response => response.json())
       .then(data => {setChains(data); setIsLoading(false)});
   }
 
   const handleSubmit = (e) => {
     setIsLoading(true)
-    fetch('https://blockchain-criptografia.azurewebsites.net/add_block', {
+    fetch(`${urlServer}/add_block`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ const Home = () => {
   }
 
   const handleClear = () => {
-    fetch('https://blockchain-criptografia.azurewebsites.net/clean_chain', {
+    fetch(`${urlServer}/clean_chain`, {
      method: "POST", 
     }).then(() => loadBlocks());
   }
